@@ -30,5 +30,11 @@ namespace PierresBakery.Controllers
             Vendor vendor = _vendors.Find(v => v.Id == id);
             return View(vendor);
         }
+        [HttpGet("/vendors/{vendorId}/orders/new")]
+        public ActionResult NewOrder(int vendorId)
+        {
+            ViewBag.VendorId = vendorId;
+            return View();
+        }
     }
 }
