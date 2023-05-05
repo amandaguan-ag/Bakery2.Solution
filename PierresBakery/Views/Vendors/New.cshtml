@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "New Vendor";
+}
+
+<h1>Add a new vendor</h1>
+<form method="post" action="/vendors">
+    <label for="name">Vendor Name:</label>
+    <input type="text" name="name" required />
+    <br />
+    <label for="description">Vendor Description:</label>
+    <input type="text" name="description" required />
+    <br />
+    <button type="submit">Add Vendor</button>
+</form>

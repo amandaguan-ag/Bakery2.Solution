@@ -13,5 +13,10 @@ namespace PierresBakery.Controllers
         {
             return View(_vendors);
         }
+        [HttpGet("/vendors/new")]
+        public ActionResult New()
+        {
+            return View();
+        }
     }
 }
