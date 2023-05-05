@@ -7,3 +7,11 @@
 <p>
     <a href="/vendors/new">Add a new vendor</a>
 </p>
+<ul>
+    @foreach (var vendor in Model)
+    {
+        <li>
+            <a href="/vendors/@vendor.Id">@vendor.Name</a>
+        </li>
+    }
+</ul>

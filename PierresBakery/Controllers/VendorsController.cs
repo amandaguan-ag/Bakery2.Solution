@@ -24,5 +24,11 @@ namespace PierresBakery.Controllers
             _vendors.Add(new Vendor { Name = name, Description = description });
             return RedirectToAction("Index");
         }
+        [HttpGet("/vendors/{id}")]
+        public ActionResult Show(int id)
+        {
+            Vendor vendor = _vendors.Find(v => v.Id == id);
+            return View(vendor);
+        }
     }
 }
