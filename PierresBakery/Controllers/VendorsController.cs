@@ -18,5 +18,11 @@ namespace PierresBakery.Controllers
         {
             return View();
         }
+        [HttpPost("/vendors")]
+        public ActionResult Create(string name, string description)
+        {
+            _vendors.Add(new Vendor { Name = name, Description = description });
+            return RedirectToAction("Index");
+        }
     }
 }
