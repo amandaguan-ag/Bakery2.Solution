@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Vendor Details";
+}
+@model PierresBakery.Models.Vendor
+
+<h1>@Model.Name</h1>
+<p>@Model.Description</p>
+
+<h2>Orders</h2>
+<p>
+    <a href="/vendors/@Model.Id/orders/new">Add a new order</a>
+</p>
+<ul>
+    @foreach (var order in Model.Orders)
+    {
+        <li>@order.Title - @order.Date.ToString("MM/dd/yyyy") - $@order.Price</li>
+    }
+</ul>
